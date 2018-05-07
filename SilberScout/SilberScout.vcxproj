@@ -116,6 +116,8 @@
     <ClCompile Include="ControlSilber.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuSilber.cpp" />
+    <ClCompile Include="OperationUi.cpp" />
+    <ClCompile Include="ResourceMgr.cpp" />
     <ClCompile Include="SilberScout.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +149,10 @@
       <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName)\.;$(QTDIR)\include\QtConcurrent;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtXmlPatterns</IncludePath>
       <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CONCURRENT_LIB;QT_CORE_LIB;QT_GUI_LIB;QT_MULTIMEDIA_LIB;QT_WIDGETS_LIB;QT_XMLPATTERNS_LIB</Define>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OperationUi.h" />
+    <ClInclude Include="ResourceMgr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

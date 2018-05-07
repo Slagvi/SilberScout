@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include "ui_ControlSilber.h"
+#include "OperationUi.h"
 
 class ControlSilber : public QWidget
 {
@@ -15,6 +16,7 @@ private:
 	Ui::ControlSilber ui;
 
 	void abandonPressed();
+	OperationUi *opUi;
 
 signals:
 	void gameAbandoned();

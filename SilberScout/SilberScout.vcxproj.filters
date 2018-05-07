@@ -42,6 +42,12 @@
     <ClCompile Include="ControlSilber.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="OperationUi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceMgr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="SilberScout.h">
@@ -72,5 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="SilberScout.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="OperationUi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceMgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
