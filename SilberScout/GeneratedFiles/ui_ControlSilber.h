@@ -42,7 +42,8 @@ public:
     {
         if (ControlSilber->objectName().isEmpty())
             ControlSilber->setObjectName(QStringLiteral("ControlSilber"));
-        ControlSilber->resize(828, 397);
+        ControlSilber->resize(946, 810);
+        ControlSilber->setFocusPolicy(Qt::StrongFocus);
         verticalLayout = new QVBoxLayout(ControlSilber);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -57,6 +58,13 @@ public:
 
         graphicsView = new QGraphicsView(ControlSilber);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(graphicsView->sizePolicy().hasHeightForWidth());
+        graphicsView->setSizePolicy(sizePolicy);
+        graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        graphicsView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
         verticalLayout->addWidget(graphicsView);
 

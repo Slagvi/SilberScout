@@ -2,16 +2,21 @@
 
 #include <QGraphicsView>
 #include <QGraphicsScene>
+#include <QTimer>
+#include <QVector2D>
 
 
-class OperationUi
+class OperationUi : public QObject
 {
 public:
 	OperationUi(QGraphicsView *v);
 	~OperationUi();
 
+	void setDirection(QVector2D dir);
+
 private:
 	void initDisplayElements();
+	void updateGameplay();
 
 	QGraphicsPixmapItem *backItem;
 	QGraphicsPixmapItem *gridItem;
@@ -20,5 +25,7 @@ private:
 
 	QGraphicsView *view;
 	QGraphicsScene *scene;
+	QTimer fpsTimer;
+	QVector2D moveDir;
 };
 
